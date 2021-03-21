@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(8+v@x!u3h23j-@oqxuw+4of+&0=%5mok30ugj8^kj286=fm4a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(int(os.environ.get('DEBUG', 1))) 
 
 ALLOWED_HOSTS = ["0.0.0.0"]
 
@@ -123,3 +123,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'profiles_api.UserProfile'
+
+# location of collectstatic files
+STATIC_ROOT = 'static/'
