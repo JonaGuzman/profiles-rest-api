@@ -15,5 +15,5 @@ Users can authenticate using their username and password and manage their user p
 * deploy your app to AWS
 
 Check the App out here:
-[Profiles Rest API](http://ec2-100-25-148-94.compute-1.amazonaws.com/api/)
+[Profiles Rest API](http://ec2-54-237-104-221.compute-1.amazonaws.com/api/)
 
