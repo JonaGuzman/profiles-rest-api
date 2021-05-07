@@ -22,10 +22,8 @@ class UserProfileTestCase(TestCase):
 
 class ProfileFeedItemTestCase(TestCase):
     def setUp(self):
-        self.user = UserProfile.objects.create(email='test@test.com',
-                                               name='test1 FullName')
-        self.feed_item = ProfileFeedItem.objects.create(
-            user_profile=self.user, status_text='Sample Status')
+        self.user = UserProfile.objects.create(email='test@test.com', name='test1 FullName')
+        self.feed_item = ProfileFeedItem.objects.create(user_profile=self.user, status_text='Sample Status')
 
     def test_profile_feed_item_str(self):
         self.assertEqual(str(self.feed_item), 'Sample Status')
